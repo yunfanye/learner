@@ -2,7 +2,7 @@
 const {app, autoUpdater, dialog, BrowserWindow} = require('electron')
 const path = require('path')
 
-const server = 'https://your-deployment-url.com'
+const server = 'https://learner-kj0s8rug1.now.sh'
 const feed = `${server}/update/${process.platform}/${app.getVersion()}`
 
 autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
@@ -24,7 +24,6 @@ autoUpdater.on('error', message => {
 })
 
 autoUpdater.setFeedURL(feed)
-autoUpdater.checkForUpdates()
 
 function createWindow () {
   // Create the browser window.
